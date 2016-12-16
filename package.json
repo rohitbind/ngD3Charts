@@ -1,0 +1,21 @@
+{
+  "name": "ngd3charts",
+  "version": "0.0.1",
+  "description": "This is a simple and easy directive for those who like to make charts for their project using d3.js",
+  "main": "js/ngD3Charts/ngD3charts.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Angular",
+    "D3js",
+    "Charts",
+    "Directive"
+  ],
+  "author": "Rohit Bind",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "angular": "^1.6.0",
+    "angular-ui-router": "^0.3.2"
+  }
+}
