@@ -11,7 +11,7 @@
     function barchart2($scope, $state) {
         $scope.title = "Bar Chart 2";
 
-        // alert($state.current.name);
+        alert($state.current.name);
 
         $scope.barChartData1 = {
             "uniqueName" : "barChartData1",
@@ -35,7 +35,8 @@
                 'y': 600
             }],
             "height" : 300,
-            "width" : 500
+            "width" : 500,
+            "barColor" : ["#1abc9c", "#e67e22", "#e74c3c"]
         };
 
         $scope.barChartData2 = {
@@ -60,7 +61,8 @@
                 'y': 60
             }],
             "height" : 300,
-            "width" : 500
+            "width" : 500,
+            "barColor" : ["#1abc9c", "#e67e22", "#e74c3c"]
         };
     }
 

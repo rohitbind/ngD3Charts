@@ -9,7 +9,7 @@
 
     /* @ngInject */
     function homeController($scope, $state) {
-        // alert($state.current.name);
+        alert($state.current.name);
     }
 
 })();

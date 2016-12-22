@@ -1,3 +1,6 @@
+* {
+  outline: none !important; }
+
 p, h3 {
   margin: 0px !important; }
 

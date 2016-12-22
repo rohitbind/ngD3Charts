@@ -17,9 +17,19 @@
             ></d3-bar-chart>
         </div>
         <div class="col-md-6">
-            <div class="form-group" ng-repeat="value in barChartData.plotingData track by $index">
-                <label>X{{$index + 1}} Value</label>
-                <input type="number" ng-model="value.y">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group" ng-repeat="value in barChartData.plotingData track by $index">
+                        <label>X{{$index + 1}} : </label>
+                        <input type="number" ng-model="value.y">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group" ng-repeat="color in barChartData.barColor track by $index">
+                        <label>Color {{$index + 1}} : </label>
+                        <input type="text" ng-model="color">
+                    </div>
+                </div>
             </div>
         </div>
     </div>

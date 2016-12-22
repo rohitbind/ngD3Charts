@@ -28,6 +28,7 @@
             var graphHeight = scope.vm.barChartData.height;
             var graphWidth = scope.vm.barChartData.width;
             var uniqueName = scope.vm.barChartData.uniqueName;
+            var barColor = scope.vm.barChartData.barColor;
 
             $timeout(function() {
                 loadD3Js();
@@ -66,15 +67,16 @@
                         .orient("left")
                         .tickSubdivide(true);
 
+                d3.select(window).on("resize", resize);
 
-                // // Here I will add responsive code
-                // d3.select(window).on("resize", resize(vis));
-                //
-                // function resize(container) {
-                //     console.log(container);
-                //     container.attr("width", graphWidth);
-                //     container.attr("height", graphHeight);
-                // }
+                //Set the size of the graph
+                function resize() {
+                    var containerWidth = parseInt(vis.style("width"));
+                    var targetWidth = containerWidth ? containerWidth : parseInt(svg.style("width"));
+                    console.log(targetWidth);
+                    svg.attr("width", targetWidth);
+                    svg.attr("height", Math.round(targetWidth / aspect));
+                }
 
                 vis.attr("width", graphWidth);
                 vis.attr("height", graphHeight);
@@ -97,12 +99,12 @@
                         return xRange(d.x);
                     })
                     .attr("fill", function(d) {
-                        if (d.x > 20) {
-                            return "#e74c3c";
-                        } else if (d.x > 10) {
-                            return "#e67e22";
+                        if (d.x > 60) {
+                            return barColor[2];
+                        } else if (d.x > 30) {
+                            return barColor[1];
                         } else if (d.x > 0 || d.x < 0) {
-                            return "#1abc9c";
+                            return barColor[0];
                         }
                         return "#95a5a6";
                     })

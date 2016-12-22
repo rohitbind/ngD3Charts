@@ -10,7 +10,7 @@
     /* @ngInject */
     function barChartController($scope, $state) {
 
-        // alert($state.current.name);
+        alert($state.current.name);
         $scope.title = "Bar Chart";
 
         $scope.barChartData = {
@@ -35,7 +35,8 @@
                 'y': 60
             }],
             "height" : 300,
-            "width" : 500
+            "width" : 500,
+            "barColor" : ["#1abc9c", "#e67e22", "#e74c3c"]
         };
     }
     
