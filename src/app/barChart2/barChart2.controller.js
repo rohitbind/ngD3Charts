@@ -1,20 +1,20 @@
-(function() {
+(function () {
     'use strict';
-    
+
     angular
         .module('analyticsChart')
-        .controller('barChartController', barChartController);
-    
-    barChartController.$inject = ['$scope'];
-    
+        .controller('barchart2', barchart2);
+
+    barchart2.$inject = ['$scope'];
+
     /* @ngInject */
-    function barChartController($scope) {
-        $scope.title = "Bar Chart";
+    function barchart2($scope) {
+        $scope.title = "Bar Chart 2";
 
         $scope.barChartData1 = {
             "uniqueName" : "barChartData1",
             "plotingData" : [{
-                'x': 1,
+                'x': 20,
                 'y': 50
             }, {
                 'x': 20,
@@ -60,6 +60,5 @@
             "width" : 500
         };
     }
-    
-})();
 
+})();

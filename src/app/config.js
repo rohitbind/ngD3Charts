@@ -16,8 +16,12 @@
             .state('home', {
                 url: '/home',
                 templateUrl: 'app/barChartModule/barChartView.html'
+            })
+            .state('home2', {
+                url: '/home2',
+                templateUrl: 'app/barChartModule/barChartView.html'
             });
 
-        $urlRouterProvider.otherwise('/home');
+        $urlRouterProvider.otherwise('/home2');
     }
 })();
