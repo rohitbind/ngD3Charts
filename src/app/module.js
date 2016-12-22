@@ -2,6 +2,6 @@
     'use strict';
 
     angular
-        .module('analyticsChart', ['ui.router']);
+        .module('analyticsChart', ['ui.router','ngStorage']);
 
 })();

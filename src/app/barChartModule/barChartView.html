@@ -27,7 +27,17 @@
                 <div class="col-md-6">
                     <div class="form-group" ng-repeat="color in barChartData.barColor track by $index">
                         <label>Color {{$index + 1}} : </label>
-                        <input type="text" ng-model="color">
+                        <input type="text" ng-model="color.color">
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button class="btn btn-danger" ng-click="setDetault()">
+                                Reset Default
+                            </button>
+                            <button class="btn btn-success" ng-click="loadNewGraph()">
+                                Apply
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>

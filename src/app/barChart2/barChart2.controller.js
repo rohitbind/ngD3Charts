@@ -62,7 +62,13 @@
             }],
             "height" : 300,
             "width" : 500,
-            "barColor" : ["#1abc9c", "#e67e22", "#e74c3c"]
+            "barColor" : [{
+                "color" : "#4caf50"
+            },{
+                "color" : "#e08600"
+            },{
+                "color" : "#cb171e"
+            }]
         };
     }
 

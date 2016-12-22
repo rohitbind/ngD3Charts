@@ -67,16 +67,19 @@
                         .orient("left")
                         .tickSubdivide(true);
 
-                d3.select(window).on("resize", resize);
 
-                //Set the size of the graph
-                function resize() {
-                    var containerWidth = parseInt(vis.style("width"));
-                    var targetWidth = containerWidth ? containerWidth : parseInt(svg.style("width"));
-                    console.log(targetWidth);
-                    svg.attr("width", targetWidth);
-                    svg.attr("height", Math.round(targetWidth / aspect));
-                }
+                // //For making it responsive
+
+                // d3.select(window).on("resize", resize);
+                //
+                // //Set the size of the graph
+                // function resize() {
+                //     var containerWidth = parseInt(vis.style("width"));
+                //     var targetWidth = containerWidth ? containerWidth : parseInt(svg.style("width"));
+                //     console.log(targetWidth);
+                //     svg.attr("width", targetWidth);
+                //     svg.attr("height", Math.round(targetWidth / aspect));
+                // }
 
                 vis.attr("width", graphWidth);
                 vis.attr("height", graphHeight);
@@ -100,11 +103,11 @@
                     })
                     .attr("fill", function(d) {
                         if (d.x > 60) {
-                            return barColor[2];
+                            return barColor[2].color;
                         } else if (d.x > 30) {
-                            return barColor[1];
+                            return barColor[1].color;
                         } else if (d.x > 0 || d.x < 0) {
-                            return barColor[0];
+                            return barColor[0].color;
                         }
                         return "#95a5a6";
                     })
