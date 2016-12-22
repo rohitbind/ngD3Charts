@@ -13,15 +13,19 @@
         $locationProvider.hashPrefix('');
 
         $stateProvider
-            .state('barChart1', {
-                url: '/barChart1',
+            .state('customChart', {
+                url: '/customChart',
                 templateUrl: 'app/barChartModule/barChartView.html'
             })
-            .state('barChart2', {
-                url: '/barChart2',
+            .state('justChart', {
+                url: '/justChart',
                 templateUrl: 'app/barChart2/barChart2.html'
+            })
+            .state('home', {
+                url: '/home',
+                templateUrl: 'app/home/home.html'
             });
 
-        $urlRouterProvider.otherwise('/barChart1');
+        $urlRouterProvider.otherwise('/home');
     }
 })();

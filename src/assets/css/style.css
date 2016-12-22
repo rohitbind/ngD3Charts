@@ -4,4 +4,15 @@ p, h3 {
 p {
   padding-bottom: 40px !important; }
 
+.navbar-nav .active {
+  color: #18bc9c !important; }
+.navbar-nav a:hover {
+  color: #18bc9c !important; }
+
+.home {
+  padding: 40px 0px; }
+  .home .mainNav a {
+    border: 1px solid #18bc9c;
+    padding: 20px; }
+
 /*# sourceMappingURL=style.css.map */

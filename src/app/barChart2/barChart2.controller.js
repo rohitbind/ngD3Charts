@@ -5,11 +5,13 @@
         .module('analyticsChart')
         .controller('barchart2', barchart2);
 
-    barchart2.$inject = ['$scope'];
+    barchart2.$inject = ['$scope', '$state'];
 
     /* @ngInject */
-    function barchart2($scope) {
+    function barchart2($scope, $state) {
         $scope.title = "Bar Chart 2";
+
+        alert($state.current.name);
 
         $scope.barChartData1 = {
             "uniqueName" : "barChartData1",
