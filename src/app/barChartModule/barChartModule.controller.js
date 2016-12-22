@@ -9,16 +9,56 @@
     
     /* @ngInject */
     function barChartController($scope) {
-        var vm = this;
-        vm.title = 'barChartController';
-        
-        activate();
-        
-        ////////////////
-        
-        function activate() {
-            
-        }
+        $scope.title = "Bar Chart";
+
+        $scope.barChartData1 = {
+            "uniqueName" : "barChartData1",
+            "plotingData" : [{
+                'x': 1,
+                'y': 5
+            }, {
+                'x': 20,
+                'y': 20
+            }, {
+                'x': 40,
+                'y': 10
+            }, {
+                'x': 60,
+                'y': 40
+            }, {
+                'x': 80,
+                'y': 5
+            }, {
+                'x': 100,
+                'y': 60
+            }],
+            "height" : 300,
+            "width" : 500
+        };
+        $scope.barChartData2 = {
+            "uniqueName" : "barChartData2",
+            "plotingData" : [{
+                'x': 1,
+                'y': 3
+            }, {
+                'x': 20,
+                'y': 20
+            }, {
+                'x': 40,
+                'y': 10
+            }, {
+                'x': 60,
+                'y': 40
+            }, {
+                'x': 80,
+                'y': 5
+            }, {
+                'x': 100,
+                'y': 60
+            }],
+            "height" : 200,
+            "width" : 500
+        };
     }
     
 })();

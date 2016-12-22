@@ -5,16 +5,19 @@
         .module('analyticsChart')
         .config(config);
 
+    config.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider'];
+
     /** @ngInject */
-    function config() {
+    function config($stateProvider, $urlRouterProvider, $locationProvider) {
+
+        $locationProvider.hashPrefix('');
+
+        $stateProvider
+            .state('home', {
+                url: '/home',
+                templateUrl: 'app/barChartModule/barChartView.html'
+            });
+
+        $urlRouterProvider.otherwise('/home');
     }
-    // function config($stateProvider) {
-    //     $stateProvider
-    //         .state('app.home', {
-    //             url: '/home',
-    //             name : 'home',
-    //             templateUrl: 'templates/barChartView.html',
-    //             controller : "barChartController as vm"
-    //         });
-    // }
 })();

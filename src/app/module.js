@@ -3,4 +3,5 @@
 
     angular
         .module('analyticsChart', ['ui.router']);
+
 })();
