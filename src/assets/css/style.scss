@@ -1,4 +1,5 @@
-body{
+$green : #18bc9c;
+html{
 
 }
 p, h3{
@@ -10,20 +11,26 @@ p{
 }
 .navbar-nav{
     .active{
-        color: #18bc9c !important;
+        color: $green !important;
     }
     a{
         &:hover{
-            color: #18bc9c !important;
+            color: $green !important;
         }
     }
 }
 .home{
-    padding: 40px 0px;
+    padding: 40px 0;
     .mainNav{
+        border: 1px solid $green;
         a{
-            border: 1px solid #18bc9c;
-            padding: 20px;
+            padding: 60px 0;
+            display: block;
+            text-decoration: none;
+            color: #333;
+            &:hover{
+                color: $green;
+            }
         }
     }
 }

@@ -11,7 +11,7 @@
     function barchart2($scope, $state) {
         $scope.title = "Bar Chart 2";
 
-        alert($state.current.name);
+        // alert($state.current.name);
 
         $scope.barChartData1 = {
             "uniqueName" : "barChartData1",

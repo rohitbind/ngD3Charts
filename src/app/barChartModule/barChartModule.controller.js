@@ -10,7 +10,7 @@
     /* @ngInject */
     function barChartController($scope, $state) {
 
-        alert($state.current.name);
+        // alert($state.current.name);
         $scope.title = "Bar Chart";
 
         $scope.barChartData = {

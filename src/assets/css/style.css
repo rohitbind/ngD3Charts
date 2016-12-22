@@ -10,9 +10,15 @@ p {
   color: #18bc9c !important; }
 
 .home {
-  padding: 40px 0px; }
-  .home .mainNav a {
-    border: 1px solid #18bc9c;
-    padding: 20px; }
+  padding: 40px 0; }
+  .home .mainNav {
+    border: 1px solid #18bc9c; }
+    .home .mainNav a {
+      padding: 60px 0;
+      display: block;
+      text-decoration: none;
+      color: #333; }
+      .home .mainNav a:hover {
+        color: #18bc9c; }
 
 /*# sourceMappingURL=style.css.map */
