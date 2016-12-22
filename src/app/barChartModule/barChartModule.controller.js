@@ -10,7 +10,7 @@
     /* @ngInject */
     function barChartController($scope, $state, $localStorage) {
 
-        // alert($state.current.name);
+        alert($state.current.name);
         $scope.title = "Bar Chart";
 
         if(!angular.isUndefined($localStorage.barChartData)){
