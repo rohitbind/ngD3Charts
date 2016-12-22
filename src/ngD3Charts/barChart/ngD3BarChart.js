@@ -93,18 +93,18 @@
                     .data(barData)
                     .enter()
                     .append('rect')
-                    // .attr("fill",function(d,i){return colors(i)})
                     .attr('x', function(d) {
                         return xRange(d.x);
                     })
                     .attr("fill", function(d) {
-                        d = +d;
-                        if (d > 25) {
-                            return "red";
-                        } else if (d > 10) {
-                            return "orange";
+                        if (d.x > 20) {
+                            return "#e74c3c";
+                        } else if (d.x > 10) {
+                            return "#e67e22";
+                        } else if (d.x > 0 || d.x < 0) {
+                            return "#1abc9c";
                         }
-                        return "yellow";
+                        return "#95a5a6";
                     })
                     .attr('y', function(d) {
                         return yRange(d.y);
@@ -113,16 +113,7 @@
                     .attr('height', function(d) {
                         return ((HEIGHT - MARGINS.bottom) - yRange(d.y));
                     })
-                    // .attr('fill', '#18bc9c')
                     .attr('style', 'transition : all 0.4s ease');
-                    // .on('mouseover', function(d) {
-                    //     d3.select(this)
-                    //         .attr('fill', '#333');
-                    // })
-                    // .on('mouseout', function(d) {
-                    //     d3.select(this)
-                    //         .attr('fill', '#18bc9c');
-                    // });
             }
         }
     }
