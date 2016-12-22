@@ -1,13 +1,21 @@
-<div id="externalDirective" ng-controller="barChartController">
-    <h1>
-        {{title}}
-    </h1>
-    <div>
-        <d3-bar-chart
-                bar-chart-data="barChartData1"
-        ></d3-bar-chart>
-        <d3-bar-chart
-                bar-chart-data="barChartData2"
-        ></d3-bar-chart>
+<div class="container" id="externalDirective" ng-controller="barChartController">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>
+                {{title}}
+            </h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <d3-bar-chart
+                    bar-chart-data="barChartData1"
+            ></d3-bar-chart>
+        </div>
+        <div class="col -md-6">
+            <d3-bar-chart
+                    bar-chart-data="barChartData2"
+            ></d3-bar-chart>
+        </div>
     </div>
 </div>

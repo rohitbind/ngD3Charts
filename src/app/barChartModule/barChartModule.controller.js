@@ -15,7 +15,7 @@
             "uniqueName" : "barChartData1",
             "plotingData" : [{
                 'x': 1,
-                'y': 5
+                'y': 50
             }, {
                 'x': 20,
                 'y': 20
@@ -39,7 +39,7 @@
             "uniqueName" : "barChartData2",
             "plotingData" : [{
                 'x': 1,
-                'y': 3
+                'y': 300
             }, {
                 'x': 20,
                 'y': 20
@@ -56,7 +56,7 @@
                 'x': 100,
                 'y': 60
             }],
-            "height" : 200,
+            "height" : 300,
             "width" : 500
         };
     }
