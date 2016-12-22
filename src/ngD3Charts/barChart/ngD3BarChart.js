@@ -15,16 +15,19 @@
             link: link,
             restrict: 'E',
             scope: {
-                data : '=barChartData'
+                barChartData : '='
             }
         };
         return directive;
 
         function link(scope) {
-            var barData = scope.vm.data.plotingData;
-            var graphHeight = scope.vm.data.height;
-            var graphWidth = scope.vm.data.width;
-
+            scope.$watch('barChartData', function() {
+                console.log('Changed');
+            });
+            var barData = scope.vm.barChartData.plotingData;
+            var graphHeight = scope.vm.barChartData.height;
+            var graphWidth = scope.vm.barChartData.width;
+            var uniqueName = scope.vm.barChartData.uniqueName;
 
             $timeout(function() {
                 loadD3Js();
@@ -32,7 +35,7 @@
 
 
             function loadD3Js() {
-                var vis = d3.select('.'+scope.vm.data.uniqueName),
+                var vis = d3.select('.'+uniqueName),
                     WIDTH = graphWidth,
                     HEIGHT = graphHeight,
                     MARGINS = {
@@ -76,10 +79,6 @@
                 vis.attr("width", graphWidth);
                 vis.attr("height", graphHeight);
 
-                vis.append("svg")
-                    .style("width", graphWidth)
-                    .style("height", graphHeight);
-
                 vis.append('svg:g')
                     .attr('class', 'x axis')
                     .attr('transform', 'translate(0,' + (HEIGHT - MARGINS.bottom) + ')')
@@ -104,14 +103,14 @@
                     .attr('height', function(d) {
                         return ((HEIGHT - MARGINS.bottom) - yRange(d.y));
                     })
-                    .attr('fill', 'grey')
+                    .attr('fill', '#18bc9c')
                     .on('mouseover', function(d) {
                         d3.select(this)
-                            .attr('fill', 'blue');
+                            .attr('fill', '#333');
                     })
                     .on('mouseout', function(d) {
                         d3.select(this)
-                            .attr('fill', 'grey');
+                            .attr('fill', '#18bc9c');
                     });
             }
         }

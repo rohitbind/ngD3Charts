@@ -1,21 +1,7 @@
-.axis path, .axis line
-{
-    fill: none;
-    stroke: #777;
-    shape-rendering: crispEdges;
-}
+p, h3 {
+  margin: 0px !important; }
 
-.axis text
-{
-    font-family: 'Arial';
-    font-size: 13px;
-}
-.tick
-{
-    stroke-dasharray: 1, 2;
-}
-.bar
-{
-    fill: FireBrick;
-}
+p {
+  padding-bottom: 40px !important; }
 
+/*# sourceMappingURL=style.css.map */

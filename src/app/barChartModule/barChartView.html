@@ -1,21 +1,26 @@
 <div class="container" id="externalDirective" ng-controller="barChartController">
     <div class="row">
         <div class="col-md-12">
-            <h1>
+            <h3>
                 {{title}}
-            </h1>
+            </h3>
+            <p>
+                Given Below is the example of the bar chart directive created from the d3js.<br>
+                With adjustable values from the textbox.
+            </p>
         </div>
     </div>
     <div class="row">
         <div class="col-md-6">
             <d3-bar-chart
-                    bar-chart-data="barChartData1"
+                    bar-chart-data="barChartData"
             ></d3-bar-chart>
         </div>
-        <div class="col -md-6">
-            <d3-bar-chart
-                    bar-chart-data="barChartData2"
-            ></d3-bar-chart>
+        <div class="col-md-6">
+            <div class="form-group" ng-repeat="value in barChartData.plotingData track by $index">
+                <label>X{{$index + 1}} Value</label>
+                <input type="number" ng-model="value.y">
+            </div>
         </div>
     </div>
 </div>

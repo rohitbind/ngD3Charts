@@ -15,31 +15,32 @@
             "uniqueName" : "barChartData1",
             "plotingData" : [{
                 'x': 20,
-                'y': 50
+                'y': 508
             }, {
                 'x': 20,
-                'y': 20
+                'y': 202
             }, {
                 'x': 40,
-                'y': 10
+                'y': 123
             }, {
                 'x': 60,
-                'y': 40
+                'y': 445
             }, {
                 'x': 80,
-                'y': 5
+                'y': 512
             }, {
                 'x': 100,
-                'y': 60
+                'y': 600
             }],
             "height" : 300,
             "width" : 500
         };
+
         $scope.barChartData2 = {
             "uniqueName" : "barChartData2",
             "plotingData" : [{
-                'x': 1,
-                'y': 100
+                'x': 20,
+                'y': 50
             }, {
                 'x': 20,
                 'y': 20
